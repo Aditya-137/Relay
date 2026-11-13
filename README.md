@@ -1,6 +1,6 @@
 # Vaani — The Relay Assignment
 
-> Grounded, zero-hallucination multi-step RAG pipeline answering technical questions from arXiv research papers under Groq free-tier constraints. Features two-tier rate limiting, local cross-encoder reranking with an early-exit score gate, deterministic citation resolution, and a calibrated stand-in mock service.
+> Grounded, high-precision multi-step RAG pipeline answering technical questions from arXiv research papers under Groq free-tier constraints. Features two-tier rate limiting, local cross-encoder reranking with an early-exit score gate, deterministic citation resolution, and a calibrated stand-in mock service.
 
 ## 🟢 Status: 100% Complete & Delivered
 

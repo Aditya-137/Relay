@@ -4,7 +4,7 @@
 
 ## 1. What I Built and Why
 
-I built **Vaani**, an agentic multi-step retrieval-augmented generation (RAG) pipeline designed to answer engineers' technical questions with zero hallucinations using a fixed library of three arXiv papers: *Attention Is All You Need* (1706.03762v7), *Moshi* (2410.00037v1), and *Dynamic Chunking* (2507.07955v2). Every response cites exact paper sections and page numbers (`[Paper Title, Section X, p. Y]`), and the system strictly refuses to answer out-of-domain questions or fabricate claims.
+I built **Vaani**, an agentic multi-step retrieval-augmented generation (RAG) pipeline designed to answer engineers' technical questions with high precision and strict hallucination mitigation using a fixed library of three arXiv papers: *Attention Is All You Need* (1706.03762v7), *Moshi* (2410.00037v1), and *Dynamic Chunking* (2507.07955v2). Every response cites exact paper sections and page numbers (`[Paper Title, Section X, p. Y]`), and the system strictly refuses to answer out-of-domain questions or fabricate claims.
 
 ### The Pipeline Architecture
 The pipeline consists of **five decoupled stages** with branching and bounded looping:
@@ -189,7 +189,9 @@ The full, unedited trajectory log is preserved in the submission package at [`do
 3. **Challenging per-user rate limit math:** *"Consider the fact that 6 req/minute doesn't do shit when our whole pipeline is at most 3 req/minute!"* (Forced the assistant to calibrate per-user limits to 2 RPM, reflecting actual pipeline capacity).
 
 ### One Mistake Caught & One Overrule
-- **Mistake Caught:** The assistant prematurely declared Phase 3 "100% complete" after writing only the core drafter, completely skipping the token bucket queue, user give-up timeout, and telemetry CSV logger. I called this out immediately and forced the assistant to implement the full harness.
+- **Mistakes Caught:** 
+  1. The assistant prematurely declared Phase 3 "100% complete" after writing only the core drafter, skipping the rate limiter queue, give-up timeouts, and CSV telemetry logger.
+  2. The assistant claimed "zero hallucinations" in the report draft; I caught this unscientific claim and forced it to be corrected to strict hallucination mitigation, pointing out that our own empirical benchmark in Table 3 reports a 6.7% error rate when retrievals lack sufficient context.
 - **Overrule:** The assistant initially suggested PyMuPDF for quick text extraction. I overruled it in favor of Docling to guarantee structured element and table hierarchy.
 
 ### Originality Statement
