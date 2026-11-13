@@ -1,0 +1,510 @@
+{
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-11-12 02:58:20",
+  "test_1_pure_rpm": {
+    "total_sent": 31,
+    "succeeded": 30,
+    "hit_429": true,
+    "first_429_call_idx": 31,
+    "first_429_body": {
+      "error": {
+        "message": "Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01jw31kv66emwb1kgvh921fxht` service tier `on_demand` on requests per minute (RPM): Limit 30, Used 30, Requested 1. Please try again in 2s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+        "type": "requests",
+        "code": "rate_limit_exceeded"
+      }
+    },
+    "latency_p50_ms": 102.61,
+    "latency_p95_ms": 341.41,
+    "latency_max_ms": 1018.44,
+    "logs": [
+      {
+        "idx": 1,
+        "t_sec": 0.27,
+        "status": 200,
+        "ms": 239.94,
+        "rem_req": "995",
+        "rem_tok": "7982",
+        "retry_after": null
+      },
+      {
+        "idx": 2,
+        "t_sec": 0.39,
+        "status": 200,
+        "ms": 124.92,
+        "rem_req": "994",
+        "rem_tok": "7982",
+        "retry_after": null
+      },
+      {
+        "idx": 3,
+        "t_sec": 0.49,
+        "status": 200,
+        "ms": 101.54,
+        "rem_req": "993",
+        "rem_tok": "7978",
+        "retry_after": null
+      },
+      {
+        "idx": 4,
+        "t_sec": 0.6,
+        "status": 200,
+        "ms": 106.32,
+        "rem_req": "992",
+        "rem_tok": "7973",
+        "retry_after": null
+      },
+      {
+        "idx": 5,
+        "t_sec": 0.7,
+        "status": 200,
+        "ms": 96.97,
+        "rem_req": "991",
+        "rem_tok": "7967",
+        "retry_after": null
+      },
+      {
+        "idx": 6,
+        "t_sec": 0.81,
+        "status": 200,
+        "ms": 109.26,
+        "rem_req": "990",
+        "rem_tok": "7962",
+        "retry_after": null
+      },
+      {
+        "idx": 7,
+        "t_sec": 0.91,
+        "status": 200,
+        "ms": 103.59,
+        "rem_req": "989",
+        "rem_tok": "7957",
+        "retry_after": null
+      },
+      {
+        "idx": 8,
+        "t_sec": 1.01,
+        "status": 200,
+        "ms": 98.44,
+        "rem_req": "988",
+        "rem_tok": "7952",
+        "retry_after": null
+      },
+      {
+        "idx": 9,
+        "t_sec": 1.11,
+        "status": 200,
+        "ms": 102.13,
+        "rem_req": "987",
+        "rem_tok": "7946",
+        "retry_after": null
+      },
+      {
+        "idx": 10,
+        "t_sec": 1.21,
+        "status": 200,
+        "ms": 97.69,
+        "rem_req": "986",
+        "rem_tok": "7940",
+        "retry_after": null
+      },
+      {
+        "idx": 11,
+        "t_sec": 1.31,
+        "status": 200,
+        "ms": 103.48,
+        "rem_req": "985",
+        "rem_tok": "7934",
+        "retry_after": null
+      },
+      {
+        "idx": 12,
+        "t_sec": 1.42,
+        "status": 200,
+        "ms": 107.77,
+        "rem_req": "984",
+        "rem_tok": "7929",
+        "retry_after": null
+      },
+      {
+        "idx": 13,
+        "t_sec": 1.52,
+        "status": 200,
+        "ms": 96.14,
+        "rem_req": "983",
+        "rem_tok": "7923",
+        "retry_after": null
+      },
+      {
+        "idx": 14,
+        "t_sec": 1.61,
+        "status": 200,
+        "ms": 98.2,
+        "rem_req": "982",
+        "rem_tok": "7917",
+        "retry_after": null
+      },
+      {
+        "idx": 15,
+        "t_sec": 1.71,
+        "status": 200,
+        "ms": 100.48,
+        "rem_req": "981",
+        "rem_tok": "7911",
+        "retry_after": null
+      },
+      {
+        "idx": 16,
+        "t_sec": 1.82,
+        "status": 200,
+        "ms": 100.97,
+        "rem_req": "980",
+        "rem_tok": "7905",
+        "retry_after": null
+      },
+      {
+        "idx": 17,
+        "t_sec": 1.92,
+        "status": 200,
+        "ms": 101.83,
+        "rem_req": "979",
+        "rem_tok": "7900",
+        "retry_after": null
+      },
+      {
+        "idx": 18,
+        "t_sec": 2.01,
+        "status": 200,
+        "ms": 96.69,
+        "rem_req": "978",
+        "rem_tok": "7894",
+        "retry_after": null
+      },
+      {
+        "idx": 19,
+        "t_sec": 2.11,
+        "status": 200,
+        "ms": 98.75,
+        "rem_req": "977",
+        "rem_tok": "7888",
+        "retry_after": null
+      },
+      {
+        "idx": 20,
+        "t_sec": 2.22,
+        "status": 200,
+        "ms": 108.56,
+        "rem_req": "976",
+        "rem_tok": "7882",
+        "retry_after": null
+      },
+      {
+        "idx": 21,
+        "t_sec": 2.32,
+        "status": 200,
+        "ms": 97.33,
+        "rem_req": "975",
+        "rem_tok": "7877",
+        "retry_after": null
+      },
+      {
+        "idx": 22,
+        "t_sec": 2.66,
+        "status": 200,
+        "ms": 341.41,
+        "rem_req": "974",
+        "rem_tok": "7872",
+        "retry_after": null
+      },
+      {
+        "idx": 23,
+        "t_sec": 2.76,
+        "status": 200,
+        "ms": 98.28,
+        "rem_req": "973",
+        "rem_tok": "7898",
+        "retry_after": null
+      },
+      {
+        "idx": 24,
+        "t_sec": 2.86,
+        "status": 200,
+        "ms": 105.09,
+        "rem_req": "972",
+        "rem_tok": "7892",
+        "retry_after": null
+      },
+      {
+        "idx": 25,
+        "t_sec": 3.88,
+        "status": 200,
+        "ms": 1018.44,
+        "rem_req": "971",
+        "rem_tok": "7886",
+        "retry_after": null
+      },
+      {
+        "idx": 26,
+        "t_sec": 3.98,
+        "status": 200,
+        "ms": 97.3,
+        "rem_req": "970",
+        "rem_tok": "7977",
+        "retry_after": null
+      },
+      {
+        "idx": 27,
+        "t_sec": 4.08,
+        "status": 200,
+        "ms": 103.74,
+        "rem_req": "969",
+        "rem_tok": "7971",
+        "retry_after": null
+      },
+      {
+        "idx": 28,
+        "t_sec": 4.19,
+        "status": 200,
+        "ms": 109.24,
+        "rem_req": "968",
+        "rem_tok": "7967",
+        "retry_after": null
+      },
+      {
+        "idx": 29,
+        "t_sec": 4.3,
+        "status": 200,
+        "ms": 103.1,
+        "rem_req": "967",
+        "rem_tok": "7961",
+        "retry_after": null
+      },
+      {
+        "idx": 30,
+        "t_sec": 4.4,
+        "status": 200,
+        "ms": 103.67,
+        "rem_req": "966",
+        "rem_tok": "7956",
+        "retry_after": null
+      },
+      {
+        "idx": 31,
+        "t_sec": 4.45,
+        "status": 429,
+        "ms": 45.84,
+        "rem_req": "966",
+        "rem_tok": null,
+        "retry_after": "2"
+      }
+    ]
+  },
+  "test_2_stepped_concurrency": [
+    {
+      "concurrency": 5,
+      "wall_time_ms": 180.69,
+      "ok_count": 5,
+      "rate_limited_429": 0,
+      "other_errors": 0,
+      "min_ms": 171.15,
+      "p50_ms": 177.73,
+      "p95_ms": 179.4,
+      "max_ms": 179.4,
+      "sample_error": null
+    },
+    {
+      "concurrency": 10,
+      "wall_time_ms": 232.98,
+      "ok_count": 9,
+      "rate_limited_429": 1,
+      "other_errors": 0,
+      "min_ms": 185.95,
+      "p50_ms": 195.63,
+      "p95_ms": 230.28,
+      "max_ms": 230.28,
+      "sample_error": "Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01jw31kv66emwb1kgvh921fxht` service tier `on_demand` on requests per minute (RPM): Limit 30, Used 30, Requested 1. Please try again in 2s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing"
+    },
+    {
+      "concurrency": 20,
+      "wall_time_ms": 203.26,
+      "ok_count": 7,
+      "rate_limited_429": 13,
+      "other_errors": 0,
+      "min_ms": 183.75,
+      "p50_ms": 198.79,
+      "p95_ms": 200.77,
+      "max_ms": 200.77,
+      "sample_error": "Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01jw31kv66emwb1kgvh921fxht` service tier `on_demand` on requests per minute (RPM): Limit 30, Used 30, Requested 1. Please try again in 2s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing"
+    },
+    {
+      "concurrency": 30,
+      "wall_time_ms": 263.11,
+      "ok_count": 7,
+      "rate_limited_429": 23,
+      "other_errors": 0,
+      "min_ms": 201.41,
+      "p50_ms": 224.72,
+      "p95_ms": 231.36,
+      "max_ms": 231.36,
+      "sample_error": "Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01jw31kv66emwb1kgvh921fxht` service tier `on_demand` on requests per minute (RPM): Limit 30, Used 30, Requested 1. Please try again in 2s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing"
+    }
+  ],
+  "test_3_sustainable_vs_overload": {
+    "steady_pace": {
+      "count": 6,
+      "success_rate": 100.0,
+      "logs": [
+        {
+          "idx": 1,
+          "status": 200,
+          "ms": 371.17
+        },
+        {
+          "idx": 2,
+          "status": 200,
+          "ms": 4653.25
+        },
+        {
+          "idx": 3,
+          "status": 200,
+          "ms": 296.33
+        },
+        {
+          "idx": 4,
+          "status": 200,
+          "ms": 264.07
+        },
+        {
+          "idx": 5,
+          "status": 200,
+          "ms": 310.61
+        },
+        {
+          "idx": 6,
+          "status": 200,
+          "ms": 304.84
+        }
+      ]
+    },
+    "overload_with_retry": {
+      "count": 16,
+      "final_success_rate": 100.0,
+      "total_retries": 4,
+      "total_p50_ms": 192.0,
+      "total_max_ms": 5579.47,
+      "logs": [
+        {
+          "idx": 1,
+          "final_status": 200,
+          "retries": 0,
+          "wait_ms": 0.0,
+          "total_ms": 302.28
+        },
+        {
+          "idx": 2,
+          "final_status": 200,
+          "retries": 0,
+          "wait_ms": 0.0,
+          "total_ms": 191.48
+        },
+        {
+          "idx": 3,
+          "final_status": 200,
+          "retries": 0,
+          "wait_ms": 0.0,
+          "total_ms": 186.9
+        },
+        {
+          "idx": 4,
+          "final_status": 200,
+          "retries": 0,
+          "wait_ms": 0.0,
+          "total_ms": 187.13
+        },
+        {
+          "idx": 5,
+          "final_status": 200,
+          "retries": 0,
+          "wait_ms": 0.0,
+          "total_ms": 437.54
+        },
+        {
+          "idx": 6,
+          "final_status": 200,
+          "retries": 0,
+          "wait_ms": 0.0,
+          "total_ms": 184.88
+        },
+        {
+          "idx": 7,
+          "final_status": 200,
+          "retries": 0,
+          "wait_ms": 0.0,
+          "total_ms": 182.74
+        },
+        {
+          "idx": 8,
+          "final_status": 200,
+          "retries": 0,
+          "wait_ms": 0.0,
+          "total_ms": 188.24
+        },
+        {
+          "idx": 9,
+          "final_status": 200,
+          "retries": 0,
+          "wait_ms": 0.0,
+          "total_ms": 197.77
+        },
+        {
+          "idx": 10,
+          "final_status": 200,
+          "retries": 0,
+          "wait_ms": 0.0,
+          "total_ms": 185.21
+        },
+        {
+          "idx": 11,
+          "final_status": 200,
+          "retries": 0,
+          "wait_ms": 0.0,
+          "total_ms": 183.67
+        },
+        {
+          "idx": 12,
+          "final_status": 200,
+          "retries": 0,
+          "wait_ms": 0.0,
+          "total_ms": 192.52
+        },
+        {
+          "idx": 13,
+          "final_status": 200,
+          "retries": 1,
+          "wait_ms": 1150.0,
+          "total_ms": 1404.26
+        },
+        {
+          "idx": 14,
+          "final_status": 200,
+          "retries": 1,
+          "wait_ms": 5150.0,
+          "total_ms": 5515.92
+        },
+        {
+          "idx": 15,
+          "final_status": 200,
+          "retries": 1,
+          "wait_ms": 4150.0,
+          "total_ms": 4421.63
+        },
+        {
+          "idx": 16,
+          "final_status": 200,
+          "retries": 1,
+          "wait_ms": 5150.0,
+          "total_ms": 5579.47
+        }
+      ]
+    }
+  }
+}

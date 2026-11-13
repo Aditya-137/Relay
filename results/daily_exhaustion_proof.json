@@ -1,0 +1,53 @@
+{
+  "summary": "Empirical discovery of Groq free-tier rolling 24-hour daily token limit (TPD = 200,000)",
+  "model": "qwen/qwen3.8-27b",
+  "organization": "org_01jw31kv66emwb1kgvh921fxht",
+  "tier": "on_demand",
+  "tests": [
+    {
+      "description": "Small request hitting daily ceiling at 199,982 tokens",
+      "status_code": 429,
+      "tokens_requested": 173,
+      "tokens_used": 199982,
+      "daily_limit": 200000,
+      "time_until_retry": "1m6.959s",
+      "retry_after_header": "67",
+      "error_message": "Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01jw31kv66emwb1kgvh921fxht` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199982, Requested 173. Please try again in 1m6.959999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+      "headers": {
+        "retry-after": "67",
+        "x-ratelimit-limit-requests": "1000",
+        "x-ratelimit-limit-tokens": "8000",
+        "x-ratelimit-remaining-requests": "913",
+        "x-ratelimit-remaining-tokens": "8000",
+        "x-ratelimit-reset-requests": "2h5m16.799s",
+        "x-ratelimit-reset-tokens": "1ms",
+        "x-should-retry": "false"
+      }
+    },
+    {
+      "description": "Medium request (1,093 tokens) against rolling window",
+      "status_code": 429,
+      "tokens_requested": 1093,
+      "tokens_used": 199958,
+      "daily_limit": 200000,
+      "time_until_retry": "7m34.032s",
+      "error_message": "Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01jw31kv66emwb1kgvh921fxht` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199958, Requested 1093. Please try again in 7m34.032s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing"
+    },
+    {
+      "description": "Large request (4,243 tokens) against rolling window",
+      "status_code": 429,
+      "tokens_requested": 4243,
+      "tokens_used": 199939,
+      "daily_limit": 200000,
+      "time_until_retry": "30m6.624s",
+      "error_message": "Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01jw31kv66emwb1kgvh921fxht` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199939, Requested 4243. Please try again in 30m6.624s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing"
+    }
+  ],
+  "key_findings": [
+    "Groq daily token limit is strictly 200,000 Tokens Per Day (TPD) for qwen/qwen3.8-27b.",
+    "The daily limit is a continuous rolling 24-hour sliding window, NOT a fixed midnight UTC reset.",
+    "Retry-after and recovery duration scale dynamically with the exact requested token volume: small requests (173 tokens) recover in ~67s as old tokens slide out, while larger requests (4,243 tokens) require ~30 minutes.",
+    "When TPD is breached, headers return x-should-retry: false.",
+    "TPD (200k tokens) is the true daily bottleneck, running out while 913 out of 1,000 Requests Per Day (RPD) remain unused."
+  ]
+}

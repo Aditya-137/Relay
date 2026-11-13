@@ -1,0 +1,29 @@
+{
+  "1706.03762v7": {
+    "paper_id": "1706.03762v7",
+    "paper_title": "Attention Is All You Need",
+    "total_elements": 154,
+    "total_pages": 15,
+    "elements_path": "/Users/adity/Repos/vaani/data/extracted/1706.03762v7/elements.json",
+    "markdown_path": "/Users/adity/Repos/vaani/data/extracted/1706.03762v7/full_text.md",
+    "duration_seconds": 16.94
+  },
+  "2410.00037v2": {
+    "paper_id": "2410.00037v2",
+    "paper_title": "Moshi: a speech-text foundation model for real-time dialogue",
+    "total_elements": 495,
+    "total_pages": 67,
+    "elements_path": "/Users/adity/Repos/vaani/data/extracted/2410.00037v2/elements.json",
+    "markdown_path": "/Users/adity/Repos/vaani/data/extracted/2410.00037v2/full_text.md",
+    "duration_seconds": 30.31
+  },
+  "2507.07955v2": {
+    "paper_id": "2507.07955v2",
+    "paper_title": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling",
+    "total_elements": 456,
+    "total_pages": 39,
+    "elements_path": "/Users/adity/Repos/vaani/data/extracted/2507.07955v2/elements.json",
+    "markdown_path": "/Users/adity/Repos/vaani/data/extracted/2507.07955v2/full_text.md",
+    "duration_seconds": 16.13
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "preset_256": {
+    "preset": "preset_256",
+    "total_chunks": 488,
+    "avg_tokens": 276.2,
+    "json_path": "/Users/adity/Repos/vaani/data/chunks/preset_256/chunks.json",
+    "csv_path": "/Users/adity/Repos/vaani/data/chunks/preset_256/manifest.csv",
+    "target_tokens": 256,
+    "overlap_tokens": 50
+  },
+  "preset_512": {
+    "preset": "preset_512",
+    "total_chunks": 285,
+    "avg_tokens": 483.9,
+    "json_path": "/Users/adity/Repos/vaani/data/chunks/preset_512/chunks.json",
+    "csv_path": "/Users/adity/Repos/vaani/data/chunks/preset_512/manifest.csv",
+    "target_tokens": 512,
+    "overlap_tokens": 100
+  },
+  "preset_1024": {
+    "preset": "preset_1024",
+    "total_chunks": 196,
+    "avg_tokens": 698.6,
+    "json_path": "/Users/adity/Repos/vaani/data/chunks/preset_1024/chunks.json",
+    "csv_path": "/Users/adity/Repos/vaani/data/chunks/preset_1024/manifest.csv",
+    "target_tokens": 1024,
+    "overlap_tokens": 150
+  }
+}
