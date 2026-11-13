@@ -12,7 +12,7 @@ Build a **multi-step LLM pipeline** in Python that answers engineers' questions 
 
 ### The 3 Papers (already downloaded)
 1. **"Attention Is All You Need"** — arXiv 1706.03762v7 (15 pages)
-2. **"Moshi: speech-text foundation model"** — arXiv 2410.00037v2 (67 pages)
+2. **"Moshi: speech-text foundation model"** — arXiv 2410.00037v1 (66 pages)
 3. **"Dynamic Chunking for Hierarchical Sequence Modeling"** — arXiv 2507.07955v2 (39 pages)
 
 ### Core Requirements

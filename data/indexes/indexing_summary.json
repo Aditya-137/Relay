@@ -1,20 +1,20 @@
 {
   "preset_1024": {
-    "total_chunks": 196,
+    "total_chunks": 195,
     "embedding_dimension": 384,
     "faiss_file": "/Users/adity/Repos/vaani/data/indexes/preset_1024/faiss.index",
     "bm25_file": "/Users/adity/Repos/vaani/data/indexes/preset_1024/bm25.pkl",
     "lookup_file": "/Users/adity/Repos/vaani/data/indexes/preset_1024/chunk_lookup.json",
-    "faiss_build_sec": 2.31,
-    "bm25_build_sec": 0.02
+    "faiss_build_sec": 1.51,
+    "bm25_build_sec": 0.01
   },
   "preset_256": {
-    "total_chunks": 488,
+    "total_chunks": 485,
     "embedding_dimension": 384,
     "faiss_file": "/Users/adity/Repos/vaani/data/indexes/preset_256/faiss.index",
     "bm25_file": "/Users/adity/Repos/vaani/data/indexes/preset_256/bm25.pkl",
     "lookup_file": "/Users/adity/Repos/vaani/data/indexes/preset_256/chunk_lookup.json",
-    "faiss_build_sec": 1.61,
+    "faiss_build_sec": 1.53,
     "bm25_build_sec": 0.02
   },
   "preset_512": {
@@ -23,7 +23,7 @@
     "faiss_file": "/Users/adity/Repos/vaani/data/indexes/preset_512/faiss.index",
     "bm25_file": "/Users/adity/Repos/vaani/data/indexes/preset_512/bm25.pkl",
     "lookup_file": "/Users/adity/Repos/vaani/data/indexes/preset_512/chunk_lookup.json",
-    "faiss_build_sec": 1.06,
+    "faiss_build_sec": 0.93,
     "bm25_build_sec": 0.02
   }
 }

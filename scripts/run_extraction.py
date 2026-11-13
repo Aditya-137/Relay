@@ -31,6 +31,18 @@ def main():
             continue
 
         paper_output_dir = EXTRACTED_DIR / paper_id
+        elements_file = paper_output_dir / "elements.json"
+
+        if elements_file.exists():
+            logger.info("Skipping already extracted paper: %s (%s)", info["title"], paper_id)
+            manifest[paper_id] = {
+                "paper_id": paper_id,
+                "title": info["title"],
+                "file_name": info["file_name"],
+                "cached": True,
+            }
+            continue
+
         logger.info("=" * 60)
         logger.info("Starting extraction for: %s (%s)", info["title"], paper_id)
         start_t = time.perf_counter()

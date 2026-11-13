@@ -7,11 +7,11 @@ PAPERS = {
         "authors": "Ashish Vaswani et al.",
         "file_name": "1706.03762v7.pdf",
     },
-    "2410.00037v2": {
+    "2410.00037v1": {
         "title": "Moshi: a speech-text foundation model for real-time dialogue",
-        "arxiv_id": "2410.00037v2",
+        "arxiv_id": "2410.00037v1",
         "authors": "Alexandre Défossez et al.",
-        "file_name": "2410.00037v2.pdf",
+        "file_name": "2410.00037v1.pdf",
     },
     "2507.07955v2": {
         "title": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling",
